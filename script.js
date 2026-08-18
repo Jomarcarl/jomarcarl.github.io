@@ -1,6 +1,10 @@
+// Active Navigation Link
 const links = document.querySelectorAll("nav a");
 let currentPage = window.location.pathname.split("/").pop();
-if (!currentPage) currentPage = "index.html";
+
+if (!currentPage) {
+  currentPage = "index.html";
+}
 
 links.forEach(link => {
   if (link.getAttribute("href") === currentPage) {
@@ -8,58 +12,88 @@ links.forEach(link => {
   }
 });
 
-const yearEl = document.querySelector("#year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+// Footer Year
+const yearEl = document.getElementById("year");
 
-const themeBtn = document.querySelector("#themeToggle");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
+// Theme Toggle
+const themeBtn = document.getElementById("themeToggle");
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light") document.body.classList.add("light");
+
+if (savedTheme === "light") {
+  document.body.classList.add("light");
+}
 
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light");
-    localStorage.setItem(
-      "theme",
-      document.body.classList.contains("light") ? "light" : "dark"
-    );
+
+    const theme = document.body.classList.contains("light")
+      ? "light"
+      : "dark";
+
+    localStorage.setItem("theme", theme);
   });
 }
 
-const backTop = document.querySelector("#backTop");
+// Back To Top Button
+const backTop = document.getElementById("backTop");
+
 if (backTop) {
-  const onScroll = () => {
-    if (window.scrollY > 240) backTop.classList.add("show");
-    else backTop.classList.remove("show");
+  const handleScroll = () => {
+    if (window.scrollY > 250) {
+      backTop.classList.add("show");
+    } else {
+      backTop.classList.remove("show");
+    }
   };
 
-  window.addEventListener("scroll", onScroll);
-  onScroll();
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
 
   backTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
 }
 
+// Reveal Animation
 const revealTargets = document.querySelectorAll(".reveal-target");
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+
+if (revealTargets.length) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold: 0.15
     }
+  );
+
+  revealTargets.forEach(el => {
+    el.classList.add("reveal");
+    observer.observe(el);
   });
-}, { threshold: 0.14 });
+}
 
-revealTargets.forEach(el => {
-  el.classList.add("reveal");
-  io.observe(el);
-});
-
+// Typing Effect
 const typingEl = document.querySelector(".typing-text");
+
 if (typingEl) {
   const words = [
-    "Aspiring Full-Stack Developer",
+    "Full-Stack Developer",
     "Web Developer",
-    "System Builder"
+    "System Developer",
+    "Problem Solver"
   ];
 
   let wordIndex = 0;
@@ -70,16 +104,26 @@ if (typingEl) {
     const currentWord = words[wordIndex];
 
     if (!deleting) {
-      typingEl.textContent = currentWord.slice(0, charIndex + 1);
+      typingEl.textContent = currentWord.substring(
+        0,
+        charIndex + 1
+      );
+
       charIndex++;
+
       if (charIndex === currentWord.length) {
         deleting = true;
         setTimeout(typeEffect, 1200);
         return;
       }
     } else {
-      typingEl.textContent = currentWord.slice(0, charIndex - 1);
+      typingEl.textContent = currentWord.substring(
+        0,
+        charIndex - 1
+      );
+
       charIndex--;
+
       if (charIndex === 0) {
         deleting = false;
         wordIndex = (wordIndex + 1) % words.length;
@@ -92,51 +136,72 @@ if (typingEl) {
   typeEffect();
 }
 
+// Counter Animation
 const counters = document.querySelectorAll("[data-count]");
-const counterObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
 
-    const counter = entry.target;
-    const target = +counter.getAttribute("data-count");
-    let current = 0;
-    const increment = Math.ceil(target / 40);
+if (counters.length) {
+  const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
 
-    const updateCounter = () => {
-      current += increment;
-      if (current >= target) {
-        counter.textContent = target === 100 ? "100%" : `${target}+`;
-      } else {
-        counter.textContent = current;
-        requestAnimationFrame(updateCounter);
-      }
-    };
+        const counter = entry.target;
+        const target = Number(
+          counter.getAttribute("data-count")
+        );
 
-    updateCounter();
-    observer.unobserve(counter);
+        let current = 0;
+        const increment = Math.ceil(target / 40);
+
+        const updateCounter = () => {
+          current += increment;
+
+          if (current >= target) {
+            if (target === 100) {
+              counter.textContent = "100%";
+            } else {
+              counter.textContent = `${target}+`;
+            }
+          } else {
+            counter.textContent = current;
+            requestAnimationFrame(updateCounter);
+          }
+        };
+
+        updateCounter();
+        observer.unobserve(counter);
+      });
+    },
+    {
+      threshold: 0.5
+    }
+  );
+
+  counters.forEach(counter => {
+    counterObserver.observe(counter);
   });
-}, { threshold: 0.5 });
+}
 
-counters.forEach(counter => counterObserver.observe(counter));
+// Smooth Scroll For Internal Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href");
 
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImg");
-const images = document.querySelectorAll(".project-images img");
-const closeBtn = document.querySelector(".close-modal");
+    if (targetId.length > 1) {
+      e.preventDefault();
 
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    modal.style.display = "block";
-    modalImg.src = img.src;
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    }
   });
 });
 
-if(closeBtn){
-  closeBtn.onclick = () => modal.style.display = "none";
+// Initialize Lucide Icons
+if (typeof lucide !== "undefined") {
+  lucide.createIcons();
 }
-
-window.onclick = (e) => {
-  if(e.target === modal){
-    modal.style.display = "none";
-  }
-};
