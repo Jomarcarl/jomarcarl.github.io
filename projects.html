@@ -1,446 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Projects | Jomar Lacieras</title>
 
-  <meta
-    name="description"
-    content="Projects by Jomar Lacieras — full-stack systems, dashboards, monitoring tools, and real-world web applications."
-  />
-  <link rel="icon" href="images/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+        content="Portfolio projects of Jomar Lacieras including ISP Billing System, Salt Production Monitoring System, Wood Panel Wall Designer, BlueTree Domain Selector, and AI Recruitment System.">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="page">
-  <div class="page-content">
 
-    <nav class="site-nav">
-      <div class="container nav-inner">
-        <div class="brand">
-          <span>Jomar</span>
-        </div>
+<div class="page-content">
 
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <!-- NAVIGATION -->
+  <nav class="site-nav">
+    <div class="container nav-inner">
 
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M21 13a9 9 0 1 1-10-10 7 7 0 0 0 10 10Z" stroke="currentColor" stroke-width="2" />
-          </svg>
-        </button>
+      <div class="brand">
+        <span>Jomar</span>
       </div>
-    </nav>
 
-    <main class="page-main">
-      <div class="container">
-        <section class="card page-card reveal-target">
-          <h1>Projects</h1>
-          <p>
-            These projects show my ability to build practical systems, improve workflows,
-            work across multiple technologies, and create interfaces that support real users
-            and operational needs.
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M21 13a9 9 0 1 1-10-10 7 7 0 0 0 10 10Z"
+                stroke="currentColor"
+                stroke-width="2"/>
+        </svg>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-main">
+    <div class="container">
+
+      <div class="page-card card reveal-target">
+
+        <p class="section-label">
+          Projects
+        </p>
+
+        <h1>
+          Featured Projects (5)
+        </h1>
+
+        <p>
+          Over the years I have built business systems, monitoring dashboards,
+          SaaS applications, and AI-powered solutions using PHP, MySQL,
+          JavaScript, React, Node.js, Linux, and Supabase.
+          Several projects are publicly deployed and available for demonstration.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="container">
+
+      <div class="project-grid">
+
+        <!-- ISP BILLING SYSTEM -->
+        <div class="project-card featured-project reveal-target">
+
+          <span class="featured-badge">
+            Featured Project
+          </span>
+
+          <h2 class="project-title">
+            ISP Billing System with CMS (FusionLink)
+          </h2>
+
+          <p class="project-highlight">
+            Enterprise-style ISP management platform with billing,
+            customer records, reporting, payment tracking,
+            and content management.
           </p>
 
-          <div class="project-grid">
+          <p>
+            A full-stack web application developed to manage customer accounts,
+            billing records, payments, reporting, service management,
+            and website content administration in a centralized platform.
+          </p>
 
-            <article class="project-card featured-project reveal-target">
-              <span class="featured-badge">Featured Project</span>
-              <div class="project-title">ISP Billing System with CMS (FusionLink)</div>
+          <div class="project-summary-grid">
 
-              <div class="project-images">
-                <div class="image-wrapper">
-                  <img
-                    src="images/isp-dashboard.png"
-                    alt="ISP Billing System Dashboard"
-                    class="zoomable-image"
-                  />
-                  <span class="zoom-label">Click to zoom</span>
-                </div>
-
-                <div class="image-wrapper">
-                  <img
-                    src="images/isp-website.png"
-                    alt="FusionLink Customer Website"
-                    class="zoomable-image"
-                  />
-                  <span class="zoom-label">Click to zoom</span>
-                </div>
-              </div>
-
-              <p class="project-highlight">
-                A full-stack billing and CMS platform built for customer management, payments, reporting, and content updates.
+            <div class="summary-box">
+              <h3>Project Goal</h3>
+              <p>
+                Streamline ISP operations by centralizing customer
+                management, billing, reporting, and administration.
               </p>
+            </div>
 
-              <div class="project-summary-grid">
-                <div class="summary-box">
-                  <h3>Project Goal</h3>
-                  <p>Build one connected platform for billing workflows, customer records, reports, and website content management.</p>
-                </div>
-                <div class="summary-box">
-                  <h3>My Contribution</h3>
-                  <p>Worked on system structure, frontend and backend features, deployment setup, debugging, and workflow improvements.</p>
-                </div>
-              </div>
-
-              <div class="project-meta">
-                <span class="tag">PHP</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Apache</span>
-                <span class="tag">Ubuntu Linux</span>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Highlights</h3>
-                <ul class="project-role">
-                  <li>Built customer, subscription, billing, invoice, payment, and CMS-related functions.</li>
-                  <li>Combined admin workflows, customer-facing pages, and content updates in one platform.</li>
-                  <li>Configured and deployed the project in a Linux environment using Apache.</li>
-                  <li>Improved usability, maintained features, and solved issues during development and testing.</li>
-                </ul>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Challenges Solved</h3>
-                <ul class="project-role">
-                  <li>Resolved database connection issues and incorrect or missing data structures.</li>
-                  <li>Handled Apache routing and server-related setup problems.</li>
-                  <li>Worked through debugging scenarios involving crashes, routing failures, and integration issues.</li>
-                  <li>Improved workflow efficiency by fixing and refining existing code.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="project-card reveal-target">
-              <div class="project-title">Salt Production Monitoring and Estimation System</div>
-
-              <div class="project-images">
-                <div class="image-wrapper">
-                  <img
-                    src="images/salt-dashboard.png"
-                    alt="Salt Farm Monitoring Dashboard"
-                    class="zoomable-image"
-                  />
-                  <span class="zoom-label">Click to zoom</span>
-                </div>
-
-                <div class="image-wrapper">
-                  <img
-                    src="images/salt-admin.png"
-                    alt="Salt Farm Admin Page"
-                    class="zoomable-image"
-                  />
-                  <span class="zoom-label">Click to zoom</span>
-                </div>
-              </div>
-
-              <p class="project-highlight">
-                A monitoring dashboard that brings together live sensor data, device controls, and production estimation support.
+            <div class="summary-box">
+              <h3>Technologies</h3>
+              <p>
+                PHP, MySQL, JavaScript,
+                Apache, Ubuntu Linux,
+                HTML and CSS.
               </p>
-
-              <div class="project-summary-grid">
-                <div class="summary-box">
-                  <h3>Project Goal</h3>
-                  <p>Provide a clear dashboard for monitoring environmental conditions and supporting salt production decisions in real time.</p>
-                </div>
-                <div class="summary-box">
-                  <h3>My Contribution</h3>
-                  <p>Designed the dashboard layout, integrated monitoring views, and built admin controls for device and system management.</p>
-                </div>
-              </div>
-
-              <div class="project-meta">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Firebase</span>
-                <span class="tag">IoT Sensors</span>
-                <span class="tag">Monitoring Dashboard</span>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Highlights</h3>
-                <ul class="project-role">
-                  <li>Designed dashboard views for salinity, temperature, humidity, radiation, water level, and production-related values.</li>
-                  <li>Created an admin interface for device controls, operating modes, and monitoring support.</li>
-                  <li>Focused on making live data easier to understand through clean visual structure.</li>
-                  <li>Helped support clearer monitoring and faster operational decisions.</li>
-                </ul>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Challenges Solved</h3>
-                <ul class="project-role">
-                  <li>Organized multiple live data sources into a readable and usable dashboard.</li>
-                  <li>Balanced system controls and monitoring information across separate views.</li>
-                  <li>Improved usability by separating critical status, environmental readings, and controls clearly.</li>
-                  <li>Designed the interface to support monitoring without overwhelming the user.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="project-card reveal-target">
-              <div class="project-title">Wood Panel Wall Designer (Full-Stack SaaS Web Application)</div>
-
-              <p class="project-highlight">
-                A full-stack SaaS platform for managing custom photo-to-wood-panel printing orders, featuring a millimeter-accurate interactive wall designer and complete production workflow management.
-              </p>
-
-              <div class="project-summary-grid">
-                <div class="summary-box">
-                  <h3>Project Goal</h3>
-                  <p>Build an end-to-end platform allowing customers to design wall layouts using custom photo panels while providing operators with production, proofing, and workflow management tools.</p>
-                </div>
-                <div class="summary-box">
-                  <h3>My Contribution</h3>
-                  <p>Designed and developed the complete application including frontend, backend APIs, database architecture, authentication, workflow automation, and deployment infrastructure.</p>
-                </div>
-              </div>
-
-              <div class="project-meta">
-                <span class="tag">Next.js</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">Prisma ORM</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Supabase</span>
-                <span class="tag">NextAuth</span>
-                <span class="tag">Tailwind CSS</span>
-                <span class="tag">Konva.js</span>
-                <span class="tag">Vercel</span>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Highlights</h3>
-                <ul class="project-role">
-                  <li>Built a millimeter-accurate drag-and-drop wall designer for arranging custom photo panels.</li>
-                  <li>Implemented panel resizing, rotation, grid snapping, photo replacement, and layout management.</li>
-                  <li>Developed role-based authentication and authorization for customers and operators.</li>
-                  <li>Created proofing and approval workflows for print-ready production jobs.</li>
-                  <li>Implemented direct browser-to-cloud image uploads using secure storage URLs.</li>
-                  <li>Built production workflow tracking and job management tools.</li>
-                  <li>Developed secure REST APIs with ownership validation and workflow protection.</li>
-                  <li>Designed PostgreSQL database architecture using Prisma ORM.</li>
-                </ul>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Challenges Solved</h3>
-                <ul class="project-role">
-                  <li>Implemented precise millimeter-based geometry calculations for wall layout positioning.</li>
-                  <li>Built automatic layout saving with undo and redo functionality.</li>
-                  <li>Handled large image uploads efficiently through cloud storage integration.</li>
-                  <li>Protected workflow state transitions through backend validation.</li>
-                  <li>Designed scalable SaaS architecture supporting multiple user roles and workflows.</li>
-                  <li>Maintained responsive performance while managing complex canvas interactions.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="project-card reveal-target">
-              <div class="project-title">BlueTree Domain Selector – Full Stack Web Application</div>
-
-              <p class="project-highlight">
-                An internal decision-support platform that evaluates, scores, and ranks publisher domains for SEO and link-building campaigns using configurable business rules.
-              </p>
-
-              <div class="project-summary-grid">
-                <div class="summary-box">
-                  <h3>Project Goal</h3>
-                  <p>Provide campaign teams with a data-driven system for evaluating publisher opportunities and generating ranked domain recommendations.</p>
-                </div>
-                <div class="summary-box">
-                  <h3>My Contribution</h3>
-                  <p>Designed and developed the complete platform including scoring engine, campaign workflows, CSV processing, reporting tools, database design, and deployment.</p>
-                </div>
-              </div>
-
-              <div class="project-meta">
-                <span class="tag">Next.js</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Prisma ORM</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Neon</span>
-                <span class="tag">Tailwind CSS</span>
-                <span class="tag">CSV Processing</span>
-                <span class="tag">Vercel</span>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Highlights</h3>
-                <ul class="project-role">
-                  <li>Built a configurable scoring engine for evaluating publisher domains.</li>
-                  <li>Implemented ranking factors including niche relevance, authority, traffic, pricing efficiency, geographic alignment, and risk assessment.</li>
-                  <li>Developed campaign workflows for brief creation, vendor uploads, domain evaluation, and shortlist generation.</li>
-                  <li>Created scoring explanation features to improve decision transparency.</li>
-                  <li>Built database-driven configuration management for scoring rules and weighting systems.</li>
-                  <li>Implemented CSV parsing, validation, bulk processing, and error handling.</li>
-                  <li>Developed campaign history, persistence, and reporting functionality.</li>
-                  <li>Deployed production infrastructure using Vercel and PostgreSQL cloud services.</li>
-                </ul>
-              </div>
-
-              <div class="project-detail-block">
-                <h3>Challenges Solved</h3>
-                <ul class="project-role">
-                  <li>Designed a flexible scoring architecture configurable without redeployment.</li>
-                  <li>Handled large vendor inventory imports through bulk CSV processing.</li>
-                  <li>Built explainable ranking outputs to support business decision-making.</li>
-                  <li>Created efficient campaign retrieval and historical tracking workflows.</li>
-                  <li>Implemented robust validation and error handling for external datasets.</li>
-                  <li>Balanced performance and maintainability for complex scoring calculations.</li>
-                </ul>
-              </div>
-            </article>
-
-          </div>
-
-          <div class="section">
-            <h2>ISP Billing System – Key Features</h2>
-            <div class="skills-grid">
-              <div class="skill">Customer Management</div>
-              <div class="skill">Subscription Tracking</div>
-              <div class="skill">Automated Billing</div>
-              <div class="skill">Invoice Generation</div>
-              <div class="skill">Payment Monitoring</div>
-              <div class="skill">CMS Integration</div>
-              <div class="skill">User Roles & Authentication</div>
-              <div class="skill">Reports & Monitoring</div>
-              <div class="skill">Website Content Management</div>
-              <div class="skill">Linux Server Deployment</div>
-              <div class="skill">Database Troubleshooting</div>
-              <div class="skill">System Integration</div>
             </div>
+
           </div>
 
-          <div class="section">
-            <h2>Salt Farm System – Key Features</h2>
-            <div class="skills-grid">
-              <div class="skill">Live Environmental Monitoring</div>
-              <div class="skill">Sensor Data Integration</div>
-              <div class="skill">Temperature Tracking</div>
-              <div class="skill">Humidity Monitoring</div>
-              <div class="skill">Solar Radiation Display</div>
-              <div class="skill">Salt Concentration Monitoring</div>
-              <div class="skill">Crystallization Tracking</div>
-              <div class="skill">Admin Device Controls</div>
-              <div class="skill">System Mode Management</div>
-              <div class="skill">Device Status Monitoring</div>
-              <div class="skill">Dashboard UI Design</div>
-              <div class="skill">Operational Decision Support</div>
-            </div>
+          <div class="project-detail-block">
+
+            <h3>Responsibilities</h3>
+
+            <ul class="project-role">
+              <li>Developed backend business logic and workflows.</li>
+              <li>Built billing and customer management modules.</li>
+              <li>Implemented reporting and administrative tools.</li>
+              <li>Created CMS functionality.</li>
+              <li>Assisted in deployment and troubleshooting.</li>
+              <li>Performed maintenance and feature enhancements.</li>
+            </ul>
+
           </div>
 
-          <div class="section">
-            <h2>Wood Panel Wall Designer – Key Features</h2>
-            <div class="skills-grid">
-              <div class="skill">Customer Dashboard</div>
-              <div class="skill">Job Management</div>
-              <div class="skill">Interactive Drag-and-Drop Wall Designer</div>
-              <div class="skill">Millimeter-Accurate Layout Engine</div>
-              <div class="skill">Role-Based Access Control</div>
-              <div class="skill">Customer & Operator Workflows</div>
-              <div class="skill">Direct Cloud Image Uploads</div>
-              <div class="skill">Auto-Save System</div>
-              <div class="skill">Undo & Redo Functionality</div>
-              <div class="skill">Grid Snapping</div>
-              <div class="skill">Panel Rotation</div>
-              <div class="skill">Photo Replacement</div>
-              <div class="skill">Production Workflow Tracking</div>
-              <div class="skill">Proofing & Approval System</div>
-              <div class="skill">Secure API Architecture</div>
-              <div class="skill">Responsive SaaS UI</div>
-            </div>
+          <div class="hero-actions">
+            <span class="btn ghost">
+              Available Upon Request
+            </span>
+
+            <a href="https://github.com/Jomarcarl"
+               target="_blank"
+               class="btn outline">
+              GitHub
+            </a>
           </div>
 
-          <div class="section">
-            <h2>BlueTree Domain Selector – Key Features</h2>
-            <div class="skills-grid">
-              <div class="skill">Domain Scoring Engine</div>
-              <div class="skill">Campaign Brief Creation</div>
-              <div class="skill">Vendor Inventory CSV Uploads</div>
-              <div class="skill">Ranked Domain Shortlists</div>
-              <div class="skill">Scoring Explanations</div>
-              <div class="skill">Campaign Selection Management</div>
-              <div class="skill">Dynamic Rule Configuration</div>
-              <div class="skill">Weight & Threshold Management</div>
-              <div class="skill">CSV Parsing</div>
-              <div class="skill">Bulk Data Processing</div>
-              <div class="skill">Historical Campaign Retrieval</div>
-              <div class="skill">Export Functionality</div>
-              <div class="skill">SEO Decision Support</div>
-              <div class="skill">PostgreSQL Persistence</div>
-              <div class="skill">Cloud Deployment</div>
-            </div>
+          <div class="project-meta">
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Apache</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Completed</span>
           </div>
 
-          <div class="section">
-            <h2>Tools & Technologies</h2>
-            <div class="skills-grid">
-              <div class="skill">VS Code</div>
-              <div class="skill">Git Basics</div>
-              <div class="skill">Apache</div>
-              <div class="skill">Ubuntu Linux</div>
-              <div class="skill">MySQL</div>
-              <div class="skill">MongoDB</div>
-              <div class="skill">Firebase</div>
-              <div class="skill">XAMPP / Local Development</div>
-              <div class="skill">Next.js</div>
-              <div class="skill">TypeScript</div>
-              <div class="skill">React</div>
-              <div class="skill">Node.js</div>
-              <div class="skill">Prisma ORM</div>
-              <div class="skill">PostgreSQL</div>
-              <div class="skill">Supabase</div>
-              <div class="skill">Neon</div>
-              <div class="skill">Tailwind CSS</div>
-              <div class="skill">NextAuth</div>
-              <div class="skill">Konva.js</div>
-              <div class="skill">Vercel</div>
-            </div>
+        </div>
+
+        <!-- SALT PRODUCTION -->
+        <div class="project-card reveal-target">
+
+          <h2 class="project-title">
+            Salt Production Monitoring and Estimation System
+          </h2>
+
+          <p class="project-highlight">
+            Real-time monitoring dashboard and estimation platform.
+          </p>
+
+          <p>
+            Developed a monitoring system that provides visibility
+            into production activities through real-time dashboards,
+            environmental monitoring, reporting, and estimation features.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="https://salt-farm-monitoring-dashboard.web.app"
+               target="_blank"
+               class="btn outline">
+              Live Demo
+            </a>
+
+            <a href="https://github.com/Jomarcarl"
+               target="_blank"
+               class="btn ghost">
+              GitHub
+            </a>
+
           </div>
 
-        </section>
-      </div>
-    </main>
+          <div class="project-meta">
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">Monitoring</span>
+            <span class="tag">Live</span>
+          </div>
 
-  </div>
+        </div>
 
-  <div id="imageModal" class="image-modal" aria-hidden="true">
-    <span class="close-modal" aria-label="Close image preview">&times;</span>
-    <img class="modal-content" id="modalImg" alt="Expanded project preview" />
-  </div>
+        <!-- WOOD PANEL -->
+        <div class="project-card reveal-target">
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+          <h2 class="project-title">
+            Wood Panel Wall Designer
+          </h2>
+
+          <p class="project-highlight">
+            Full-Stack SaaS Web Application.
+          </p>
+
+          <p>
+            Built an interactive web application that allows users
+            to design custom wood panel wall layouts,
+            manage projects, and visualize panel arrangements.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="https://wood-panel-wall-designer.vercel.app"
+               target="_blank"
+               class="btn outline">
+              Live Demo
+            </a>
+
+            <a href="https://github.com/Jomarcarl"
+               target="_blank"
+               class="btn ghost">
+              GitHub
+            </a>
+
+          </div>
+
+          <div class="project-meta">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">SaaS</span>
+            <span class="tag">Live</span>
+          </div>
+
+        </div>
+
+        <!-- BLUETREE -->
+        <div class="project-card reveal-target">
+
+          <h2 class="project-title">
+            BlueTree Domain Selector
+          </h2>
+
+          <p class="project-highlight">
+            Full-Stack Domain Selection Platform.
+          </p>
+
+          <p>
+            Developed a web platform that helps users discover,
+            evaluate, and filter domain name options through
+            an intuitive search and selection process.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="https://bluetree-domain-selector-khaki.vercel.app"
+               target="_blank"
+               class="btn outline">
+              Live Demo
+            </a>
+
+            <a href="https://github.com/Jomarcarl"
+               target="_blank"
+               class="btn ghost">
+              GitHub
+            </a>
+
+          </div>
+
+          <div class="project-meta">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Web App</span>
+            <span class="tag">Live</span>
+          </div>
+
+        </div>
+
+        <!-- AI RECRUITMENT -->
+        <div class="project-card reveal-target">
+
+          <h2 class="project-title">
+            AI Recruitment System
+          </h2>
+
+          <p class="project-highlight">
+            AI-Powered Candidate Screening Platform.
+          </p>
+
+          <p>
+            Built a recruitment platform that helps manage
+            candidate applications, automate screening processes,
+            and support hiring workflows through AI-assisted evaluation.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="https://ai-recruitment-system-dun.vercel.app"
+               target="_blank"
+               class="btn outline">
+              Live Demo
+            </a>
+
+            <a href="https://github.com/Jomarcarl"
+               target="_blank"
+               class="btn ghost">
+              GitHub
+            </a>
+
+          </div>
+
+          <div class="project-meta">
+            <span class="tag">React</span>
+            <span class="tag">AI</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Recruitment</span>
+            <span class="tag">Live</span>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="footer-center">
-        © <span id="year"></span> Jomar Lacieras. All rights reserved.
-      </div>
-
-      <div class="footer-links">
-        <a href="assets/Jomar_Lacieras_CV.pdf" target="_blank" rel="noopener">CV</a>
-      </div>
     </div>
-  </footer>
+  </section>
 
-  <button class="backtop" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+  <!-- CTA -->
+  <section class="section cta-section">
 
-  <script src="script.js"></script>
+    <div class="container">
+
+      <div class="cta-card reveal-target">
+
+        <p class="section-label">
+          Interested In Working Together?
+        </p>
+
+        <h2>
+          Let's Build Something Useful
+        </h2>
+
+        <p>
+          I am currently open to full-time,
+          freelance, and project-based opportunities.
+        </p>
+
+        <div class="hero-actions center-actions">
+
+          <a href="contact.html"
+             class="btn primary">
+            Contact Me
+          </a>
+
+          <a href="assets/Jomar_Lacieras_CV.pdf"
+             target="_blank"
+             class="btn outline">
+            Download CV
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-center">
+      © <span id="year"></span> Jomar Lacieras.
+      All Rights Reserved.
+    </div>
+
+    <div class="footer-links">
+      <a href="https://github.com/Jomarcarl" target="_blank">
+        GitHub
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+<button class="backtop"
+        id="backTop"
+        aria-label="Back to Top">
+  ↑
+</button>
+
+<script src="script.js"></script>
+
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 </html>
